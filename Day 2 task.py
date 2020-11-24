@@ -27,4 +27,3 @@ b = int(b)
 
 print(a,':',type(a),b,':',type(b))
 #output = 1000.0 : <class 'float'> 100 : <class 'int'>
-
