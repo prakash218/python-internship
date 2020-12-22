@@ -153,11 +153,10 @@ class Coffee_Machine:
 
 
 
-	def get_input(self):
-		print("Enter your choice :(1.espresso/2.latte/3.cappuccino)")
+	def get_input(self, value):
 		choice = 0
 		try:
-			choice = input()
+			choice = value
 			clear()
 			choice = int(choice)
 		except:
@@ -172,7 +171,7 @@ class Coffee_Machine:
 				self.get_input()
 			
 			print('Bad Input \n Try again')
-			self.get_input()
+			
 
 		if choice == 1:
 			self.option = 'Espresso'
@@ -186,15 +185,13 @@ class Coffee_Machine:
 			self.option = 'Cappuccino'
 			self.recipe.get_recipe(self.option)
 
-		self.get_input()
+		
 
 	def print_details(self):
 		print(self.option)
 
 
-if __name__ == '__main__':
-	starbucks = Coffee_Machine()
-	starbucks.get_input()
+
 
 
 
